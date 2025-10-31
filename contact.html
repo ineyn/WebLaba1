@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Контакти - Тарас Шевченко</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- Підключення шрифту Noto Sans -->
+</head>
+
+<body>
+    <div class="container">
+        <header class="fixed-menu">
+            <h1>КОНТАКТИ</h1>
+            <nav>
+                <a href="index.html">ГОЛОВНА</a>
+                <a href="#museum of hero">ПОЧАТОК СТОРІНКИ</a>
+                <a href="#auth forms">ФОРМИ ІДЕНТИФІКАЦІЇ</a>
+                <a href="#feedback form">ЗВ'ЯЗОК</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="museum of hero" class="hero-section">
+                <h2>Музей-заповідник Тараса Шевченка</h2>
+                <blockquote class="quote-box">
+                    "Кохайтеся, чорнобриві, та не з москалями..."
+                    <cite><br><strong>— Тарас Шевченко. "Катерина"</strong></cite>
+                </blockquote>
+            </section>
+
+            <section class="biography-section">
+                <img src="https://vandrivka.com.ua/wp-content/uploads/2018/05/Muzej-T.-G.-SHevchenka-m.-Kaniv-1-1140x713.jpg" alt="музей Шевченка" class="float-image-left">
+                <p>
+                    <span class="highlight">Національний заповідник "Тарас Шевченко"</span> у Каневі — це унікальний історико-культурний комплекс, присвячений життю та творчості великого українського поета.
+                </p>
+                <p>
+                    Заповідник розташований на <span class="highlight">Чернечій горі</span>, де згідно з заповітом поховано Тараса Г. Шевченка. Тут знаходиться його могила, пам'ятник, музей та науково-дослідний центр.
+                </p>
+                <p>
+                    На території заповідника проводяться екскурсії, наукові конференції, літературні читання та культурні заходи, присвячені вшануванню пам'яті Кобзаря українського народу.
+                </p>
+            </section>
+
+            <!-- Картинки на картинці -->
+            <section class="contacts-photo-section">
+                <img src="https://travels.in.ua/api/Photo/PhotoStreamCPOI/40834" alt="Фото музею 1" class="stack-img img1">
+                <img src="http://ukrainaincognita.com/wp-content/uploads/files/taras1.jpg" alt="Фото музею 2" class="stack-img img2">
+                <img src="http://ukrainaincognita.com/wp-content/uploads/files/taras4.jpg" alt="Фото музею 3" class="stack-img img3">
+            </section>
+
+            <!-- Секція форм авторизації -->
+            <section id="auth forms" class="auth-section">
+                
+                <nav class="auth-menu">
+                <a href="#auth forms">ФОРМИ ІДЕНТИФІКАЦІЇ</a>
+                <a href="#feedback form">ЗВОРОТНІЙ ЗВ'ЯЗОК</a>
+                </nav>
+                
+                <h2>Форми ідентифікації</h2>
+                <div class="auth-container">
+
+                <!-- Форма реєстрації -->
+                    <div id="auth-form" class="auth-form register-form">
+                        <h2>Реєстрація</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="register-name">Ім'я:</label>
+                                <input type="text" id="register-name" name="name" placeholder="Ваше ім'я" required minlength="2">
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email">Email:</label>
+                                <input type="email" id="register-email" name="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Пароль:</label>
+                                <input type="password" id="register-password" name="password" placeholder="Мінімум 6 символів" required minlength="6" pattern=".{6,}">
+                            </div>
+                            <div class="form-group">
+                                <label for="register-confirm">Підтвердження паролю:</label>
+                                <input type="password" id="register-confirm" name="confirm" placeholder="Повторіть пароль" required minlength="6">
+                            </div>
+                            <button type="submit">Зареєструватися</button>
+                        </form>
+                    </div>
+
+                    <!-- Форма логіну -->
+                    <div class="auth-form login-form">
+                        <h2>Вхід</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="login-email">Email:</label>
+                                <input type="email" id="login-email" name="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Пароль:</label>
+                                <input type="password" id="login-password" name="password" placeholder="Введіть пароль" required minlength="6">
+                            </div>
+                            <button type="submit">Увійти</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        
+            <!-- Форма зворотного зв'язку -->
+            <section id="feedback form" class="form-section">
+                <h2>Форма зворотного зв'язку</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Повне ім'я (ПІБ):</label>
+                        <input type="text" id="name" name="name" placeholder="Введіть ваше повне ім'я" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Електронна адреса:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="text" id="phone" name="phone" placeholder="+380 XX XXX XX XX" pattern="^\380\d{9}$" title="Формат: +380XXXXXXXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Стать:</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Чоловік</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Жінка</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Ударний гелікоптер AH-64 (Apache) з шістнадцятьмома maverics на борту</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Вік:</label>
+                        <select id="age" name="age">
+                            <option value="">Виберіть вашу вікову категорію</option>
+                            <option value="under18">До 18 років</option>
+                            <option value="18-25">18-25 років</option>
+                            <option value="26-35">26-35 років</option>
+                            <option value="36-50">36-50 років</option>
+                            <option value="51-65">51-65 років</option>
+                            <option value="over65">Понад 65 років</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Що вас цікавить:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="biography" name="interests" value="biography">
+                                <label for="biography">Біографія Т. Шевченка</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="poetry" name="interests" value="poetry">
+                                <label for="poetry">Поетична творчість</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="art" name="interests" value="art">
+                                <label for="art">Художня творчість</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="museum" name="interests" value="museum">
+                                <label for="museum">Відвідування музею</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="research" name="interests" value="research">
+                                <label for="research">Наукові дослідження</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Ваше повідомлення:</label>
+                        <textarea id="message" name="message" placeholder="Розкажіть нам про ваше зацікавлення творчістю Тараса Шевченка або задайте питання..." required minlength="10"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visit-date">Бажана дата відвідування музею:</label>
+                        <input type="date" id="visit-date" name="visit-date">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit">Відправити повідомлення</button>
+                        <button type="reset">Очистити форму</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Посиланнями на соц. мережі -->
+            <section class="social-media-section">
+                <h2>Ми в соціальних мережах:</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/shevchenkomuseumkyiv/" target="_blank" class="social-icon" aria-label="Facebook">
+                        <img src="./images/facebook.jpg" alt="Facebook">
+                    </a>
+                    
+                    <a href="https://www.instagram.com/shemuseum/" target="_blank" class="social-icon" aria-label="Instagram">
+                        <img src="images/instagram.jpg" alt="Instagram">
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@shemuseum" target="_blank" class="social-icon" aria-label="YouTube">
+                        <img src="./images/youtube.jpg" alt="YouTube">
+                    </a>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer>
+            <h6><p>© Київ 2025 - Національний заповідник "Тарас Шевченко"</p></h6>
+            <h6><p>Телефон: 066 666-66-66</p></h6>
+            <h6><p>Email: blonskyi.ivan@lll.kpi.ua</p></h6>
+        </footer>
+    </div>
+</body>
+</html>
