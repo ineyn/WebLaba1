@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестування</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-menu">
+        <h1>JS TEST</h1>
+        <div class="student-info-header">
+            <span>Студент: <b id="header-student-name">Гість</b></span>
+            <span>Група: <b id="header-student-group">---</b></span>
+        </div>
+        <nav>
+            <a href="index.html">ГОЛОВНА</a>
+            <a href="contact.html">КОНТАКТИ</a>
+            <a href="quiz.html" class="active">ТЕСТУВАННЯ</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            
+            <section id="auth-screen" class="quiz-section">
+                <h2 class="section-title">Реєстрація на тестування</h2>
+                <form id="start-form" class="auth-form-internal">
+                    <div class="form-group">
+                        <label>ПІБ Студента:</label>
+                        <input type="text" id="student-name" required minlength="5" placeholder="Іванов Іван Іванович">
+                    </div>
+                    <div class="form-group">
+                        <label>Група:</label>
+                        <input type="text" id="student-group" required pattern="[А-Яа-яІіЇї]{2}-\d{2}" placeholder="ТР-41">
+                        <small>Формат: ТР-41</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Рівень складності:</label>
+                        <select id="difficulty-level">
+                            <option value="easy">Початковий</option>
+                            <option value="medium">Середній</option>
+                            <option value="hard">Складний</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-start">Розпочати тест</button>
+                </form>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <button id="show-history-btn" class="btn-history">Показати історію спроб</button>
+                </div>
+
+                <div id="history-container" class="history-section hidden">
+                    <h3>Історія тестувань</h3>
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Студент</th>
+                                <th>Рівень</th>
+                                <th>Час</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-body">
+                            </tbody>
+                    </table>
+                    <button id="clear-history-btn" style="background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-top: 10px; cursor: pointer;">Очистити історію</button>
+                </div>
+            </section>
+
+            <section id="quiz-screen" class="quiz-section hidden">
+                <div class="quiz-header">
+                    <h3>Питання <span id="current-q-num">1</span> з 10</h3>
+                    <div class="timer">Час: <span id="timer">00:00</span></div>
+                </div>
+                
+                <div id="question-container" class="question-card">
+                    </div>
+
+                <div class="controls">
+                    <button id="next-btn" class="btn-next">Наступне питання</button>
+                </div>
+            </section>
+
+            <section id="result-screen" class="quiz-section hidden">
+                <h2 class="section-title">Результати тестування</h2>
+                <div class="result-card">
+                    <h3>Ваш результат: <span id="final-score">0</span> / <span id="total-qs">10</span></h3>
+                    
+                    <p class="result-time-text">Витрачений час: <span id="final-time" style="font-weight: bold; color: #3498db;">00:00</span></p>
+                    
+                    <p id="result-message"></p>
+                    <div id="answers-review"></div>
+                    <button onclick="location.reload()" class="btn-restart">Пройти знову</button>
+                </div>
+            </section>
+
+        </div>
+
+    <footer>
+        <h6><span>© Київ 2025</span></h6>
+        <h6><span>Основи JavaScript: умовні конструкції та цикли</span></h6>
+    </footer>
+
+    </div>
+    
+    <script src="./js/quiz.js"></script>
+</body>
+</html>
