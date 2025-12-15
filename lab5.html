@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - ЛР 5</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/lab5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-menu">
+        <h1>JS LAB 5</h1>
+        <nav>
+            <a href="index.html">ГОЛОВНА</a>
+            <a href="contact.html">КОНТАКТИ</a>
+            <a href="quiz.html">ТЕСТИ</a>
+            <a href="lab5.html" class="active">ГАЛЕРЕЯ</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            
+            <section class="gallery-section">
+                <h2 class="section-title">Галерея: Наші чотирилапі друзі</h2>
+                <p style="text-align: center; margin-bottom: 30px;">
+                    Ця сторінка використовує <b>Fetch API</b> для отримання випадкових зображень з 
+                    <a href="https://dog.ceo/dog-api/" target="_blank">Dog CEO API</a>.
+                </p>
+
+                <div class="controls" style="text-align: center;">
+                    <button id="loadBtn" class="btn-refresh">🔄 Оновити фото</button>
+                </div>
+
+                <div id="statusMessage" class="status-message" style="text-align: center;"></div>
+
+                <div id="galleryGrid" class="gallery-grid">
+                    </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <h6><span>© Київ 2025</span></h6>
+            <h6><span>Варіант: 2 (Собаки)</span></h6>
+        </footer>
+    </div>
+
+    <script src="./js/lab5.js"></script>
+</body>
+</html>
